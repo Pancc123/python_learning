@@ -1,0 +1,4 @@
+In Python you can create a list where can put every element.
+In Python you can put data into variable and use them.
+In Python you can use if to check a series of conditions when you program coad.
+In Python you can create a dictionary which is  able to relate informations.

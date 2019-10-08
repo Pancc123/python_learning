@@ -1,0 +1,6 @@
+*** Settings ***
+
+*** Test Cases ***
+test case
+     log    robot framework
+
