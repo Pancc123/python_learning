@@ -1,8 +1,5 @@
 #! -*- coding:utf-8 -*-
-
-#如果要启动大量的子进程，可以用进程池的方式批量创建子进程
-
-
+# 如果要启动大量的子进程，可以用进程池的方式批量创建子进程
 import multiprocessing
 import time
 
@@ -12,6 +9,7 @@ def func(msg):
     print(msg)
     time.sleep(1)
   return "done " + msg
+
 if __name__ == "__main__":
   pool = multiprocessing.Pool(processes=4)
   result = []

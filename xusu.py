@@ -1,4 +1,4 @@
-number=list(range(1,10))
+number = list(range(1,10))
 for i in number:
 	if i==1:
 		print('1st')
@@ -18,7 +18,3 @@ for i in number:
 		print('8th')
 	else:
 		print('9th')
-	
-	
-	
-	
