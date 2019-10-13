@@ -14,11 +14,15 @@ class Car():
 	def read_odometer(self):
 		"""打印一条关于汽车里程的消息"""
 		print('This car has '+str(self.odometer_reading)+' miles on it.')
+
 	def update_odometer(self,mileage):
 		self.odometer_reading=mileage
 
-my_new_car=Car('aoui','A4',2016)
-print(my_new_car.get_descriptive_name())
 
-my_new_car.update_odometer(23)
-my_new_car.read_odometer()
+if __name__ == "__main__":
+	# 内部方法修改类默认参数值
+	my_new_car=Car('aoui','A4',2016)
+	print(my_new_car.get_descriptive_name())
+	my_new_car.read_odometer()
+	my_new_car.update_odometer(23)
+	my_new_car.read_odometer()

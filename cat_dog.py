@@ -1,16 +1,20 @@
 import os
 import shutil
+# shutil可以实现文件的复制，移动
+
+
 def print_animal(filename):
 	try:
 		with open(filename) as f_obj:
-			contents=f_obj.read()
+			contents = f_obj.read()
 	except FileNotFoundError:
-		msg='Sorry,the file '+ filename +' not exist.'
+		msg = 'Sorry,the file ' + filename + ' not exist.'
 		print(msg)
-		shutil.move('text_files\cat.txt','except\cat.txt')
+		shutil.move('except\\cat.txt','text_files\\cat.txt')
 	else:
 		print(contents)
 
-filenames=['text_files\cat.txt','text_files\dog.txt']
+
+filenames = ['text_files\\cat.txt', ]
 for filename in filenames:
 	print_animal(filename)

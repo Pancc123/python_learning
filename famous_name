@@ -1,3 +1,0 @@
-famous_name='Albert Einstein '
-message=famous+'once said,"A person who never made a mistake never tried anyting to new"'
-print(message)

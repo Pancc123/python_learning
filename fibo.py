@@ -13,3 +13,7 @@ def fib2(n):
 		result.append(b)
 		a,b = b,a+b
 	return result
+
+if __name__ == "__main":
+	fib(100)
+	fib2(100)
