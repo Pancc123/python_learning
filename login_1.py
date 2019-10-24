@@ -1,4 +1,3 @@
-
 #!/usr/sbin/python3
 error_num=3
 username=input('输入用户名：')

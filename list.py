@@ -1,4 +1,4 @@
-the_beauty=['linyune','liuyifei','songhuiqiao']
+the_beauty =['linyune','liuyifei','songhuiqiao']
 print('hai,'+the_beauty[0]+'! Cat i have dinner with you?')
 print('Hi, '+the_beauty[1]+' Cat i have a dinner with you?')
 print('Hi, '+the_beauty[2]+' Cat i have a dinner with you?')
