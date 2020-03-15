@@ -2,7 +2,7 @@ import modbus_tk.modbus_tcp as mt
 import modbus_tk.defines as md
 
 # 远程连接到服务器端
-master = mt.TcpMaster("127.0.0.1", 9999)
+master = mt.TcpMaster("192.168.10.175", 6327)
 master.set_timeout(5.0)
 
 # @slave=1 : identifier of the slave. from 1 to 247.  0为广播所有的slave
