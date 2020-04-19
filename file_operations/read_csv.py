@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-import csv
+import csv,os
 
 
 def read_csv(file_name):
@@ -23,8 +23,9 @@ if __name__ == "__main__":
     for row in reader:
         for i in row:
             print(i)'''
-    filename = "D:\\python_work\\text_files\\info.csv"
-    reader = read_csv(filename)
+    file_path1 = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    file_path = os.path.join(file_path1, r'test_files\info.csv')
+    reader = read_csv(file_path)
     for user in reader:
         # print(user)
         print(user[1])

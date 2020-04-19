@@ -1,6 +1,10 @@
-from file_operations.file_rw import read_txt
+from file_operations.txt_read import read_txt
+import os
 
-t = read_txt("D:\\python_work\\text_files\\user_info.txt")
+file_path1 = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+file_path = os.path.join(file_path1, r'test_files\user_info.txt')
+
+t = read_txt(file_path)
 for line in t.read_file2():
     username = line.split(',')[0]
     password = line.split(',')[1]

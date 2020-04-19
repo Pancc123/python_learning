@@ -10,11 +10,11 @@ def print_animal(filename):
 	except FileNotFoundError:
 		msg = 'Sorry,the file ' + filename + ' not exist.'
 		print(msg)
-		shutil.move('except\\cat.txt','text_files\\cat.txt')
+		shutil.move('except\\cat.txt','test_files\\cat.txt')
 	else:
 		print(contents)
 
 
-filenames = ['text_files\\cat.txt', ]
+filenames = ['test_files\\cat.txt', ]
 for filename in filenames:
 	print_animal(filename)

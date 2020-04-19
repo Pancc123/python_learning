@@ -10,7 +10,7 @@ def countword(file_names):
 		words=contents.split()
 		num_words=len(words)
 		print('The file '+file_names+' has about '+str(num_words)+' words.')
-file_name=['text_files\\alice.txt','text_files\\alice1.txt','text_file\\alice3.txt','text_files\\alice2.txt']
+file_name=['test_files\\alice.txt','test_files\\alice1.txt','text_file\\alice3.txt','test_files\\alice2.txt']
 for file_names in file_name:
 	countword(file_names)
 	
