@@ -12,12 +12,12 @@ def tcplink(sock, addr):
         if not data or data.decode('utf-8') == 'exit':
             break
         sock.send(('Hello,%s!' %data.decode('utf-8')).encode('utf-8'))
-        sock.close()
-        print('Connection from %s:%s closed.' %addr)
+    sock.close()
+    print('Connection from %s:%s closed.' %addr)
 
 
 s = socket(AF_INET, SOCK_STREAM)
-s.bind(('127.0.0.1',8888))
+s.bind(('192.168.0.115',8888))
 s.listen(5)
 print('Waitting for connection...')
 while True:

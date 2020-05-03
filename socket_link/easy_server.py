@@ -15,7 +15,7 @@ while True:
 	print('Wait for connection ...')
 	tctimeClient, addr = tctime.accept()
 	print('Connection from:', addr)
-	
+
 	while True:
 		data = tctimeClient.recv(buffsize).decode('utf-8')
 		time.sleep(2)
