@@ -1,6 +1,6 @@
-﻿from file_operations.file_rw import read_txt
+﻿from file_operations.txt_read import read_txt
 
-file_name = 'D:\\python_work\\text_files\\pi_digits.txt'
+file_name = 'D:\\python_work\\test_files\\pi_digits.txt'
 t = read_txt(file_name)
 data = t.read_file()
 print(data.rstrip())

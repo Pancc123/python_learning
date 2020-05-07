@@ -1,4 +1,4 @@
-filename='text_files\\alice.txt'
+filename='test_files\\alice.txt'
 
 try:
 	with open(filename) as fb_obj:
