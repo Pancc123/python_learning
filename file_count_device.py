@@ -6,9 +6,10 @@ from collections import Counter
 # 截取文档内容（2个参数，合并成一个字符串），返回字符串列表
 def truncate_doc(file_name):
     L = []
-    with open(file_name, 'r')as f:
+    with open(file_name, 'r',encoding='utf-8')as f:
          #data = f.read()
         data = f.readlines()
+        print(data)
         for line in data:
             t = re.findall(r'\d\.\d\.\d', line)
             if t:

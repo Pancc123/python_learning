@@ -7,6 +7,7 @@ with open(file_name) as f_obj:
 	fav_digtal=json.load(f_obj)
 	print("I know your favorite number! It's "+fav_digtal+'.')'''
 
+
 def words():
 	file_name='digtal.json'
 	try:
@@ -20,5 +21,6 @@ def words():
 			json.dump(fav_digtal,f_obj)
 	else:
 		print("I know your favorite number! It's "+fav_digtal+'.')
+
 
 words()
