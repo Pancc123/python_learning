@@ -3,6 +3,7 @@ from socket import *
 import binascii
 
 
+# 输出tcp-server 返回的内容
 def tcp_client(ip, port,msg):
     # 创建一个socket:
     s = socket(AF_INET, SOCK_STREAM)
@@ -14,16 +15,41 @@ def tcp_client(ip, port,msg):
     buffer = []
     while True:
         d = s.recv(1024)  # 每次最多接受1k字节
-        if d:
-            d=binascii.b2a_hex(d)
+        if not d:
+            break
+        else:
+            d = binascii.b2a_hex(d)
             print(d.decode("utf-8"))
             buffer.append(d)
-        else:
-            break
     data1 = b''.join(buffer)
     # print(data1)
     s.close()
     return data1
+
+
+# 阻塞式
+def tcp_client1(ip, port, msg):
+    # 创建一个socket:
+    s = socket(AF_INET, SOCK_STREAM)
+    # 建立连接
+    s.connect((ip, port))  # s.connect(('www.sina.com.cn',80))
+    s.send(msg)  # 发送数据
+    while True:
+        try:
+            d = s.recv(1024)  # 每次最多接受1k字节
+            if not d:
+                break
+            else:
+                send_frame = msg  # 填写发送数据
+                s.send(bytes().fromhex(send_frame))
+                # s.send(send_frame.encode('utf-8'))
+                # print(data)
+        except Exception as e:
+            print(e)
+            break
+    # data1 = b''.join(buffer)
+    print("disconnected")
+    s.close()
 
 
 def output_msg(data):
