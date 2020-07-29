@@ -1,0 +1,19 @@
+- login_ok:
+    params:
+      action: "serviceProviderLogin"
+      username: "pcc"
+      password: "pan123"
+      exp: "1"
+    check_type:
+      code: "2"
+      message: "2"
+      data: "4"
+    check_data:
+      code: "None"
+      message: "None"
+      data:
+        sysUpdater: "account/account:1498120279672"
+
+- login_password_wrong:
+
+- user_not_exist:
