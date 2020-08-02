@@ -10,4 +10,4 @@ def findDirFile(dirName, keyword):
             print('找到以下文件：%s' % os.path.realpath(x))
 
 
-t = findDirFile('D:/python_test','test')
+t = findDirFile(r'D:','test')

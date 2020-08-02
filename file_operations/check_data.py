@@ -20,13 +20,18 @@ def check_response(self, case_name, file_data, response):
                                                      "不等于期望结果" + check_data[key]
             elif check_type[key] == '4':
                 response_data = text[key]
-                data_type = type(check_data[key])
+                data = check_data[key]
                 while True:
+                    data_type=type(data)
                     if data_type == str:
                         assert response_data ==check_data[key] , "测试失败：response返回值" + response_data + \
                                                            "不等于期望结果" + check_data[key]
                         break
-                    if data_type ==list:
+                    if data_type == list:
+                        data = check_data[key][0]
+                        continue
+                    if data_type == dict:
+
                         
 
 
