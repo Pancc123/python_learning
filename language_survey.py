@@ -9,5 +9,6 @@ while True:
 		break
 	else:
 		my_survey.store_response(response)
-print("\nThank you to everyone who participated in the survey!")
+		print("\nThank you to everyone who participated in the survey!")
+
 my_survey.show_results
