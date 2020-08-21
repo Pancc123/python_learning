@@ -1,7 +1,8 @@
 # -*- coding:utf-8 -*-
+import random,os
 
 
-class read_txt:
+class Rw_txt:
     def __init__(self, file_name):
         self.file_name = file_name
 
@@ -19,5 +20,24 @@ class read_txt:
         with open(self.file_name, 'r') as objects:
             line = objects.readline()
             return line
+
+    def write_file(self, data):
+        with open(self.file_name, 'w') as objects:
+            objects.write(data)
+
+    def addto_file(self,data):
+        with open(self.file_name, 'a') as objects:
+            objects.write(data)
+
+
+if __name__ == '__main__':
+    file_path1 = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    file_path = os.path.join(file_path1, r'test_files\test_write.txt')
+    t = Rw_txt(file_path)
+    for i in range(1, 10):
+        m = random.randint(10, 100)
+        print(str(m)+'\n')
+        t.addto_file(str(m)+'\n')
+
 
 

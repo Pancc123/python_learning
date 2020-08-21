@@ -17,4 +17,4 @@ if __name__ == '__main__':
     file_path = os.path.join(file_path1, r'test_files\number.json')
     numbers = [2, 3, 4, 5, 6, 7, 9]
     read_json_file(file_path)
-    write_json_file(numbers, file_path)
+    # write_json_file(numbers, file_path)
