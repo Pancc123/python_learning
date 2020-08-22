@@ -1,4 +1,4 @@
-from txt_read import Rw_txt
+from txt_rw import Rw_txt
 import os
 
 file_path1 = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))

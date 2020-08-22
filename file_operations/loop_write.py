@@ -1,4 +1,4 @@
-from rw_js_file import write_json_file,add_json_file
+from js_rw import write_json_file,add_json_file
 import random,os
 
 
