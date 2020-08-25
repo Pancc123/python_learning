@@ -7,7 +7,7 @@ class Rw_txt:
         self.file_name = file_name
 
     def read_file(self):  # 读取列表返回整个文件对象组成的超大字符串
-        with open(self.file_name, 'r') as objects:
+        with open(self.file_name, 'r',encoding='utf-8') as objects:
             contents = objects.read()
             return contents
 
