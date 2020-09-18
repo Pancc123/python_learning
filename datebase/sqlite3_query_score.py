@@ -46,7 +46,7 @@ def get_score_in(low, high):
     i = len(values)
     print(i)
     L = []
-    while i-1>=0:
+    while i-1 >= 0:
         L.append(values[i-1][0])
         i = i-1
     L.reverse()
