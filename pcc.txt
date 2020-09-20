@@ -1,1 +1,0 @@
-hello,world!≈Àpwd.getpwuid(os.stat('44030012.log').st_uid)[0]
