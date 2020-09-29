@@ -1,0 +1,8 @@
+syntax = "proto2";
+message stuff
+{
+required int32 stuff_ID = 1;
+required string stuff_Name = 2;
+optional int32 stuff_Num = 3;
+
+}
