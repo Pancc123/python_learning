@@ -18,3 +18,5 @@ def print_animal(filename):
 filenames = ['test_files\\cat.txt', ]
 for filename in filenames:
 	print_animal(filename)
+print("1")
+print("2")
