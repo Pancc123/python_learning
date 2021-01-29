@@ -16,7 +16,7 @@ try:
         sql= 'select realname,phone,email,sign from sign_guest where phone=%s'
         cursor.execute(sql, ('15067196993',))
         result = cursor.fetchone()
-        print(reslut)
+        print(result)
 finally:
     conn.close()
 
