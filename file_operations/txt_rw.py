@@ -36,7 +36,7 @@ if __name__ == '__main__':
     t = Rw_txt(file_path)
     for i in range(1, 10):
         m = random.randint(10, 100)
-        print(str(m)+'\n')
+        print(str(m))
         t.addto_file(str(m)+'\n')
 
 

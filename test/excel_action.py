@@ -33,7 +33,7 @@ def open_excel(path):
 def modify_excel_width(path):
     wb = load_workbook(path)
     ws = wb[wb.sheetnames[0]]
-    ws.column_dimensions['C'].width = 12
+    ws.column_dimensions['C'].width = 12 # 设置行宽
     ws.column_dimensions['E'].width = 20
     ws.column_dimensions['F'].width = 20
     ws.column_dimensions['G'].width = 50
