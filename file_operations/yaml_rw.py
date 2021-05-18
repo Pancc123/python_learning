@@ -50,7 +50,7 @@ from ruamel import yaml
 
 if __name__ == '__main__':
     file_path1 = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    file_path = os.path.join(file_path1, r'test_files\test3.yaml')
+    file_path = os.path.join(file_path1, r'test_files\test.yaml')
     # file_path = os.path.join(file_path1, r'test_files\login.yaml')
     data = yaml_read(file_path)
     print(data)

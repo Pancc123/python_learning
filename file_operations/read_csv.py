@@ -26,6 +26,7 @@ if __name__ == "__main__":
     file_path1 = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
     file_path = os.path.join(file_path1, r'test_files\info.csv')
     reader = read_csv(file_path)
+    birth_header = next(reader) # 读取第一行数据，之后reader就只有从第二行开始的数据了
     for user in reader:
-        # print(user)
+        # print(type(user))
         print(user[1])
