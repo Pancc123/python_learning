@@ -10,21 +10,12 @@ from openpyxl.styles import Color, Font, Alignment
 from openpyxl.utils import get_column_letter
 
 new_file = r'D:\N3-K网管-Kddi新增功能-用例1.xlsx'
-# 打开已有的1个excel，之后保存
-def open_excel(path):
+
+
+def open_excel(path):  # 打开已有的1个excel，之后保存
     def deco_func(fun):
         def wrapper(*args, **kwargs):
-            wb = load_workbook(path)
-            ws = wb[wb.sheetnames[0]]
-            wb.save(path)
-            f = fun(*args, **kwargs)
-            # 通过索引得到sheet
-    # sheetnames = wb.sheetnames
-    # print(sheetnames)
-    # print(wb["data"]) 以sheetname做索引查询sheet
-    # ws = wb[wb.sheetnames[0]]
-
-
+            fun(*args, **kwargs)
         return wrapper
     return deco_func
 
@@ -32,7 +23,10 @@ def open_excel(path):
 @open_excel(new_file)
 def modify_excel_width(path):
     wb = load_workbook(path)
-    ws = wb[wb.sheetnames[0]]
+    # sheetnames = wb.sheetnames
+    # print(sheetnames)
+    # print(wb["data"]) 以sheetname做索引查询sheet
+    ws = wb[wb.sheetnames[0]]  # wb.sheetnames[0]获取sheet名称
     ws.column_dimensions['C'].width = 12 # 设置行宽
     ws.column_dimensions['E'].width = 20
     ws.column_dimensions['F'].width = 20
@@ -45,4 +39,4 @@ def modify_excel_width(path):
 
 if __name__== "__main__":
     new_file = r'D:\N3-K网管-Kddi新增功能-用例1.xlsx'
-    open_excel(new_file)
+    modify_excel_width(new_file)

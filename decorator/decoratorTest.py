@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
-
 # 装饰器测试
+
 
 def test_1(fun):
     def wrapper(*args, **kwargs):
@@ -20,7 +20,5 @@ def test_2(var):
     print(var)
 
 
-
-
-if __name__=='__main__':
+if __name__ == '__main__':
     test_2("good")

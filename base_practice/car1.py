@@ -24,6 +24,9 @@ class Car:
 	def increment_odometer(self, miles):
 		self.odometer_reading += miles
 
+	def test(self):
+		self.ll = 1
+
 
 my_used_car=Car('subaru','outback',2013)
 print(my_used_car.get_descriptive_name())
@@ -33,3 +36,5 @@ my_used_car.read_odometer()
 
 my_used_car.increment_odometer(23500)
 my_used_car.read_odometer()
+my_used_car.test()
+print(my_used_car.odometer_reading,my_used_car.ll)
