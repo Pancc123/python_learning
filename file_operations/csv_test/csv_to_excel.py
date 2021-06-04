@@ -49,7 +49,9 @@ def csv_to_xlsx1(csvfile,outfile,sheet_name):
         workbook.save(outfile)  # 保存Excel
 
 
-
+# 以元组方式写入csv
+def write_csv(x_path,data):
+    pass
 
 
 if __name__ == '__main__':
